@@ -15,4 +15,12 @@ public class EmailAddress {
         this.dateOfBirth = dateOfBirth;
         this.email = email;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof EmailAddress)) return false;
+        EmailAddress other = (EmailAddress) obj;
+        return other.lastName != null && other.lastName.equals(lastName)
+                && other.firstName != null && other.firstName.equals(firstName);
+    }
 }

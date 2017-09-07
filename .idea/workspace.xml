@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b1b9da3-ea0b-415d-bea1-a0961bd1197a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sources.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java" afterPath="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/filnik/repository/Repository.java" afterPath="$PROJECT_DIR$/src/main/java/com/filnik/repository/Repository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,16 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            <state relative-caret-position="166">
+              <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#464#478#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
+                <element signature="e#489#503#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#1037#1038#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+                <element signature="e#1156#1157#0" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
+                <element signature="e#1271#1272#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +76,8 @@
       <file leaf-file-name="EmailAddress.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="95">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -89,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeRepositoryTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeRepositoryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="291">
+              <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,8 +120,8 @@
       <file leaf-file-name="Repository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/Repository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="38">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -169,10 +173,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/service/EmailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/service/BirthdayService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java" />
-        <option value="$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sources.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/filnik/repository/Repository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java" />
       </list>
     </option>
   </component>
@@ -412,31 +417,17 @@
       <option name="project" value="LOCAL" />
       <updated>1504797289348</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adds stores test and adds partially employeeRepository implementation">
+      <created>1504799983280</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1504799983280</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 12m 11s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 12m 18s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 13m 14s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 13m 35s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 13m 55s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 30m 07s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 42m 54s.xml">
-      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 57m 12s.xml">
       <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
     </history-entry>
@@ -444,6 +435,27 @@
       <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 58m 10s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 02m 44s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 14m 45s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 14m 53s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 16m 13s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 17m 52s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 17m 56s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 18h 18m 03s.xml">
       <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -486,7 +498,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Makes the code compile" />
     <MESSAGE value="Adds first employeeRepositoryTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds first employeeRepositoryTest" />
+    <MESSAGE value="Adds stores test and adds partially employeeRepository implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds stores test and adds partially employeeRepository implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -497,13 +510,13 @@
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java</url>
+          <line>38</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -528,14 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/Repository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -568,24 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sources.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -594,15 +581,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmailAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="166">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#464#478#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
+            <element signature="e#489#503#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1156#1157#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

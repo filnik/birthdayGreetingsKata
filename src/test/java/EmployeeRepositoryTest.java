@@ -14,7 +14,7 @@ public class EmployeeRepositoryTest {
     @Test
     public void employeeRepositoryHasEmailAddresses() throws Exception {
         EmployeeRepository repository = new EmployeeRepository();
-        EmailAddress[] emailAddress = repository.load();
+        EmailAddress[] emailAddress = repository.loadFromDatabase();
         assertTrue(emailAddress.length > 0);
     }
 
@@ -26,5 +26,16 @@ public class EmployeeRepositoryTest {
         repository.store(emailAddress);
         EmailAddress[] emailAddresses = repository.load();
         assertTrue(emailAddresses.length == 1);
+    }
+
+    @Test
+    public void employeeRepositoryDeletesEmailAddressesCorrectly() throws Exception {
+        EmployeeRepository repository = new EmployeeRepository();
+        EmailAddress emailAddress = new EmailAddress("lastname", "firstname",
+                LocalDateTime.now(), "filnik90@gmail.com");
+        repository.store(emailAddress);
+        repository.delete(emailAddress);
+        EmailAddress[] emailAddresses = repository.load();
+        assertTrue(emailAddresses.length == 0);
     }
 }
