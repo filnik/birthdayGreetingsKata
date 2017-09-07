@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b1b9da3-ea0b-415d-bea1-a0961bd1197a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/filnik/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/filnik/service/EmailService.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/filnik/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/filnik/repository/Repository.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexagonal-architecture-kata.iml" afterPath="$PROJECT_DIR$/hexagonal-architecture-kata.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,6 +13,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hexagonal_architecture_kata$EmployeeRepositoryTest.coverage" NAME="EmployeeRepositoryTest Coverage Results" MODIFIED="1504797114208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -48,14 +41,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="38">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#160#161#0" expanded="true" />
+                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#198#199#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeRepositoryTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeRepositoryTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+            <state relative-caret-position="266">
+              <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,11 +146,11 @@
         <option value="$PROJECT_DIR$/src/com/filnik/repository/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/src/com/filnik/repository/EmailAddress.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/service/EmailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/filnik/service/BirthdayService.java" />
         <option value="$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java" />
       </list>
     </option>
   </component>
@@ -214,6 +207,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="filnik" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexagonal-architecture-kata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexagonal-architecture-kata" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="filnik" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hexagonal-architecture-kata" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hexagonal-architecture-kata" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="filnik" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hexagonal-architecture-kata" type="b2602c69:ProjectViewProjectNode" />
@@ -351,10 +362,49 @@
       <option name="presentableId" value="Default" />
       <updated>1504768674142</updated>
     </task>
+    <task id="LOCAL-00001" summary="Makes the code compile">
+      <created>1504796749871</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1504796749871</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Makes the code compile">
+      <created>1504797267634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504797267634</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 03m 59s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 10m 24s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 11m 24s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 11m 55s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 12m 11s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 12m 18s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 13m 14s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 13m 35s.xml">
+      <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeRepositoryTest - 2017.09.07 at 17h 13m 55s.xml">
       <configuration name="EmployeeRepositoryTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -371,6 +421,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32883435" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -392,8 +443,21 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Makes the code compile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Makes the code compile" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java</url>
+          <line>15</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -437,17 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#160#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/service/EmailService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -478,10 +531,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        <state relative-caret-position="266">
+          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/filnik/repository/EmployeeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding>
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
           </folding>
         </state>
       </provider>
