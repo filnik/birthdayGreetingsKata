@@ -15,7 +15,7 @@ public class EmployeeRepositoryTest {
     public void employeeRepositoryHasEmailAddresses() throws Exception {
         EmployeeRepository repository = new EmployeeRepository();
         EmailAddress[] emailAddress = repository.loadFromDatabase();
-        assertTrue(emailAddress.length > 0);
+        assertTrue(emailAddress.length == 2);
     }
 
     @Test

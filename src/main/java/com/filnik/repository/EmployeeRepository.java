@@ -16,8 +16,8 @@ public class EmployeeRepository implements Repository<EmailAddress[]> {
         String fileContent = readFromFile();
         String[] lines = fileContent.split("\n");
         for (String line : lines) {
-            if (line.equals("last_name")) continue;
             String[] elements = line.split(", ");
+            if (elements[0].equals("last_name")) continue;
             emailAddresses.add(new EmailAddress(elements[0], elements[1], LocalDateTime.now(), elements[3]));
         }
         return load();

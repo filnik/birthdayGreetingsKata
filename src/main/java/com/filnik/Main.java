@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         EmployeeRepository employeeRepository = new EmployeeRepository();
-        EmailService emailService = null;
+        EmailService emailService = new EmailService();
         BirthdayService birthdayService = new BirthdayService(
                 employeeRepository, emailService);
         birthdayService.sendGreetings(today());
