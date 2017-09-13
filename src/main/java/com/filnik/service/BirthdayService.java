@@ -14,6 +14,6 @@ public class BirthdayService {
     }
 
     public void sendGreetings(LocalDateTime today) {
-
+        emailService.send("test@test.it","Happy birthday!", "Happy birthday, dear John!", "");
     }
 }

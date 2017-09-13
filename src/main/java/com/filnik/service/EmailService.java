@@ -15,7 +15,7 @@ public class EmailService {
         client.setConnection(new ImapGmailConnection(EMAIL, PASSWORD.toCharArray()));
     }
 
-    public void send(String email, String subject, String content, String contentType) throws Exception {
+    public void send(String email, String subject, String content, String contentType) {
         final JavaMailGmailMessage message = new JavaMailGmailMessage();
         message.setSubject(subject);
         message.setContentText(content);

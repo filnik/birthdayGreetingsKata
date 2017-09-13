@@ -60,7 +60,7 @@ public class BirthdayServiceTest {
         }
 
         @Override
-        public void send(String email, String subject, String content, String contentType) throws Exception {
+        public void send(String email, String subject, String content, String contentType) {
             MESSAGE = new JavaMailGmailMessage();
             MESSAGE.addTo(new com.googlecode.gmail4j.EmailAddress(email));
             MESSAGE.setSubject(subject);
