@@ -74,6 +74,33 @@ public class BirthdayServiceTest {
         assertTrue(mailService.messages.size() == 1);
     }
 
+    @Test
+    public void sendGreetingsInLeapYear() throws Exception {
+        LocalDateTime birthday = LocalDateTime.of(2004, 02, 29, 01, 10);
+        LocalDateTime today = LocalDateTime.of(2017, 02, 28, 01, 10);
+        employeeRepository.store(new EmailAddress("Furlan",
+                "Giovanni", birthday,
+                "mobile.pos.test2017@gmail.com"));
+
+        birthdayService.sendGreetings(today);
+
+        assertTrue(mailService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
+        assertTrue(mailService.messages.size() == 1);
+    }
+
+    @Test
+    public void avoidDoubleGreetingsInLeapYear() throws Exception {
+        LocalDateTime birthday = LocalDateTime.of(2004, 02, 29, 01, 10);
+        LocalDateTime today = LocalDateTime.of(2016, 02, 28, 01, 10);
+        employeeRepository.store(new EmailAddress("Furlan",
+                "Giovanni", birthday,
+                "mobile.pos.test2017@gmail.com"));
+
+        birthdayService.sendGreetings(today);
+
+        assertTrue(mailService.messages.size() == 0);
+    }
+
     private class EmployeeRepositorySpy extends EmployeeRepository{
 
         public EmployeeRepositorySpy() {

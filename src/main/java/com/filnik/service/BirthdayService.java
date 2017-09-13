@@ -4,6 +4,7 @@ import com.filnik.repository.EmailAddress;
 import com.filnik.repository.EmployeeRepository;
 
 import java.time.LocalDateTime;
+import java.time.Month;
 
 public class BirthdayService {
     public static final String MAIL_SUBJECT = "Happy birthday!";
@@ -28,7 +29,13 @@ public class BirthdayService {
     }
 
     private boolean shouldISendMail(LocalDateTime date, EmailAddress emailAddress) {
-        return date.getMonth().equals(emailAddress.getDate().getMonth()) &&
-                date.getDayOfYear() == emailAddress.getDate().getDayOfYear();
+        boolean isSameDay = date.getDayOfYear() == emailAddress.getDate().getDayOfYear();
+        final boolean isFebruary = date.getMonth().equals(Month.FEBRUARY)
+                && emailAddress.getDate().getMonth().equals(Month.FEBRUARY);
+        final boolean birthdayIs29February = emailAddress.getDate().getDayOfMonth() == 29;
+        final boolean todayIsDay28 = date.getDayOfMonth() == 28;
+        final boolean todayIsLeapYear = date.getYear() % 4 == 0;
+
+        return isSameDay || ( isFebruary && birthdayIs29February && todayIsDay28 && !todayIsLeapYear);
     }
 }
