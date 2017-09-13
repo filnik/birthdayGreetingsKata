@@ -23,4 +23,16 @@ public class EmailAddress {
         return other.lastName != null && other.lastName.equals(lastName)
                 && other.firstName != null && other.firstName.equals(firstName);
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return firstName;
+    }
+
+    public LocalDateTime getDate() {
+        return dateOfBirth;
+    }
 }
