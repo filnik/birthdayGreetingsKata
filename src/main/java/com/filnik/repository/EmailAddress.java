@@ -35,4 +35,8 @@ public class EmailAddress {
     public LocalDateTime getDate() {
         return dateOfBirth;
     }
+
+    public String getLastname() {
+        return lastName;
+    }
 }

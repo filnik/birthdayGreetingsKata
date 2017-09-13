@@ -18,7 +18,13 @@ public class EmployeeRepository implements Repository<EmailAddress[]> {
         for (String line : lines) {
             String[] elements = line.split(", ");
             if (elements[0].equals("last_name")) continue;
-            emailAddresses.add(new EmailAddress(elements[0], elements[1], LocalDateTime.now(), elements[3]));
+            String[] dateValues = elements[2].split("/");
+            final int year = Integer.parseInt(dateValues[0]);
+            final int month = Integer.parseInt(dateValues[1]);
+            final int dayOfMonth = Integer.parseInt(dateValues[2]);
+            LocalDateTime date = LocalDateTime.of(year, month,
+                    dayOfMonth, 1, 1);
+            emailAddresses.add(new EmailAddress(elements[0], elements[1], date, elements[3]));
         }
         return load();
     }

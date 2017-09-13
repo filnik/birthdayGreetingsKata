@@ -27,6 +27,16 @@ public class EmployeeRepositoryTest {
         EmailAddress[] emailAddresses = repository.load();
         assertTrue(emailAddresses.length == 1);
     }
+    @Test
+    public void employeeRepositoryLoadsEmailAddressesCorrectly() throws Exception {
+        EmployeeRepository repository = new EmployeeRepository();
+        LocalDateTime date = LocalDateTime.of(1982, 10, 8, 11, 10);
+        EmailAddress[] emailAddresses = repository.loadFromDatabase();
+        assertTrue(emailAddresses[0].getEmail().equals("filnik90@gmail.com"));
+        assertTrue(emailAddresses[0].getName().equals("John"));
+        assertTrue(emailAddresses[0].getLastname().equals("Doe"));
+        assertTrue(emailAddresses[0].getDate().getDayOfYear() == date.getDayOfYear());
+    }
 
     @Test
     public void employeeRepositoryDeletesEmailAddressesCorrectly() throws Exception {

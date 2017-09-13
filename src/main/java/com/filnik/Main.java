@@ -7,6 +7,10 @@ import com.filnik.service.EmailService;
 import java.time.LocalDateTime;
 
 public class Main {
+    /*
+    - Missing 29 february handling
+    - Emails are being sent even if the day is not today. Mhm. Why?
+     */
 
     public static void main(String[] args) {
         EmployeeRepository employeeRepository = new EmployeeRepository();
