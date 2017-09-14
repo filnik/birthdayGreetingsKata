@@ -1,7 +1,7 @@
 # birthdayGreetingsKata
 My implementation of the "birthday greetings kata" - http://matteo.vaccari.name/blog/archives/154
 
-##Run
+## Run
 
 This is a maven project.
 
