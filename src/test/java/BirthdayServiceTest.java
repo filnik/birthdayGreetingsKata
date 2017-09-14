@@ -1,6 +1,7 @@
-import com.filnik.repository.EmailAddress;
+import com.filnik.repository.Employee;
 import com.filnik.repository.EmployeeRepository;
 import com.filnik.service.BirthdayService;
+import com.filnik.service.CommunicationService;
 import com.filnik.service.EmailService;
 import com.googlecode.gmail4j.javamail.JavaMailGmailMessage;
 import org.junit.Before;
@@ -17,88 +18,86 @@ import static org.junit.Assert.assertTrue;
 public class BirthdayServiceTest {
 
     private BirthdayService birthdayService;
-    private EmailServiceSpy mailService;
+    private EmailServiceSpy communicationService;
     private EmployeeRepositorySpy employeeRepository;
 
     @Before
     public void setUp() throws Exception {
         employeeRepository = new EmployeeRepositorySpy();
-        mailService = new EmailServiceSpy();
-        birthdayService = new BirthdayService(employeeRepository, mailService);
+        communicationService = new EmailServiceSpy();
+        birthdayService = new BirthdayService(employeeRepository, communicationService);
 
-        employeeRepository.store(new EmailAddress("Furlan",
+        employeeRepository.store(new Employee("Furlan",
                 "Davide", LocalDateTime.now(), "mobile.pos.test2017@gmail.com"));
     }
 
     @Test
     public void sendGreetingsToTheRightEmployee() throws Exception {
         birthdayService.sendGreetings(LocalDateTime.now());
-        assertTrue(mailService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
+        assertTrue(communicationService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
     }
 
     @Test
     public void sendGreetingsWithTheRightSubjectAndContent() throws Exception {
-        employeeRepository.store(new EmailAddress("Furlan",
+        employeeRepository.store(new Employee("Furlan",
                 "Giovanni", LocalDateTime.now(), "mobile.pos.test2017@gmail.com"));
 
         birthdayService.sendGreetings(LocalDateTime.now());
 
-        assertTrue(mailService.messages.get(0).getSubject().equals("Happy birthday!"));
-        assertTrue(mailService.messages.get(0).getContentText().equals("Happy birthday, dear Davide!"));
-        assertTrue(mailService.messages.get(1).getSubject().equals("Happy birthday!"));
-        assertTrue(mailService.messages.get(1).getContentText().equals("Happy birthday, dear Giovanni!"));
+        assertTrue(communicationService.messages.get(0).getContentText().contains("Davide"));
+        assertTrue(communicationService.messages.get(1).getContentText().contains("Giovanni"));
     }
 
     @Test
     public void sendGreetingsToday() throws Exception {
-        employeeRepository.store(new EmailAddress("Furlan",
+        employeeRepository.store(new Employee("Furlan",
                 "Giovanni", LocalDateTime.of(2017, 01, 03, 01, 10),
                 "mobile.pos.test2017@gmail.com"));
 
         birthdayService.sendGreetings(LocalDateTime.now());
 
-        assertTrue(mailService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
-        assertTrue(mailService.messages.size() == 1);
+        assertTrue(communicationService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
+        assertTrue(communicationService.messages.size() == 1);
     }
 
     @Test
     public void sendGreetingsACertainDate() throws Exception {
         LocalDateTime date = LocalDateTime.of(2017, 01, 03, 01, 10);
-        employeeRepository.store(new EmailAddress("Furlan",
+        employeeRepository.store(new Employee("Furlan",
                 "Giovanni", date,
                 "mobile.pos.test2017@gmail.com"));
 
         birthdayService.sendGreetings(date);
 
-        assertTrue(mailService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
-        assertTrue(mailService.messages.size() == 1);
+        assertTrue(communicationService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
+        assertTrue(communicationService.messages.size() == 1);
     }
 
     @Test
     public void sendGreetingsInLeapYear() throws Exception {
         LocalDateTime birthday = LocalDateTime.of(2004, 02, 29, 01, 10);
         LocalDateTime today = LocalDateTime.of(2017, 02, 28, 01, 10);
-        employeeRepository.store(new EmailAddress("Furlan",
+        employeeRepository.store(new Employee("Furlan",
                 "Giovanni", birthday,
                 "mobile.pos.test2017@gmail.com"));
 
         birthdayService.sendGreetings(today);
 
-        assertTrue(mailService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
-        assertTrue(mailService.messages.size() == 1);
+        assertTrue(communicationService.messages.get(0).getTo().get(0).getEmail().equals("mobile.pos.test2017@gmail.com"));
+        assertTrue(communicationService.messages.size() == 1);
     }
 
     @Test
     public void avoidDoubleGreetingsInLeapYear() throws Exception {
         LocalDateTime birthday = LocalDateTime.of(2004, 02, 29, 01, 10);
         LocalDateTime today = LocalDateTime.of(2016, 02, 28, 01, 10);
-        employeeRepository.store(new EmailAddress("Furlan",
+        employeeRepository.store(new Employee("Furlan",
                 "Giovanni", birthday,
                 "mobile.pos.test2017@gmail.com"));
 
         birthdayService.sendGreetings(today);
 
-        assertTrue(mailService.messages.size() == 0);
+        assertTrue(communicationService.messages.size() == 0);
     }
 
     private class EmployeeRepositorySpy extends EmployeeRepository{
@@ -107,12 +106,12 @@ public class BirthdayServiceTest {
         }
 
         @Override
-        public EmailAddress[] loadFromDatabase() {
-            return new EmailAddress[]{};
+        public Employee[] loadFromDatabase() {
+            return new Employee[]{};
         }
     }
 
-    private class EmailServiceSpy extends EmailService {
+    private class EmailServiceSpy implements CommunicationService {
         public ArrayList<JavaMailGmailMessage> messages = new ArrayList<>();
 
         public EmailServiceSpy() {
@@ -120,11 +119,10 @@ public class BirthdayServiceTest {
         }
 
         @Override
-        public void send(String email, String subject, String content, String contentType) {
+        public void send(Employee employee) {
             JavaMailGmailMessage message = new JavaMailGmailMessage();
-            message.addTo(new com.googlecode.gmail4j.EmailAddress(email));
-            message.setSubject(subject);
-            message.setContentText(content);
+            message.addTo(new com.googlecode.gmail4j.EmailAddress(employee.getEmail()));
+            message.setContentText(employee.getName());
             messages.add(message);
         }
 
