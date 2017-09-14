@@ -32,6 +32,7 @@ public class EmailService implements CommunicationService{
         message.setSubject(MAIL_SUBJECT);
         message.setContentText(String.format(MAIL_CONTENT, employee.getName()));
         message.addTo(new EmailAddress(employee.getEmail()));
+        message.setFrom(new EmailAddress("test@hexagonal.it"));
         client.send(message);
     }
 }
