@@ -5,15 +5,15 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class EmployeeRepository implements Repository<Employee[]> {
+public class EmployeeRepository implements Repository<Employee> {
     private HashMap<String, ArrayList<Employee>> employees = new HashMap<>();
 
-    public Employee[] load() {
+    public ArrayList<Employee> load() {
         ArrayList<Employee> results = new ArrayList<Employee>();
         for (ArrayList<Employee> array : employees.values()){
             results.addAll(array);
         }
-        return results.toArray(new Employee[0]);
+        return results;
     }
 
     public void store(Employee... employees) {
