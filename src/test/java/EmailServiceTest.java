@@ -21,7 +21,7 @@ public class EmailServiceTest {
     private static final String EMAIL = "mobile.pos.test2017@gmail.com";
     private static final String PASSWORD = "mp0$_t3$t345lom870";
     private static final String MAIL_SUBJECT = "Happy birthday!";
-    public static final String FIRST_NAME = "firstName";
+    private static final String FIRST_NAME = "firstName";
     private ImapGmailClient client;
     private List<GmailMessage> messages;
 

@@ -1,33 +1,12 @@
 package com.filnik.repository;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class EmployeeRepository implements Repository<Employee[]> {
-    private String path = "/Users/filippo/Documents/study/hexagonal-architecture-kata/src/main/resources/sources.txt";
     private HashMap<String, ArrayList<Employee>> employees = new HashMap<>();
-
-    public Employee[] loadFromDatabase() {
-        String fileContent = readFromFile();
-        String[] lines = fileContent.split("\n");
-        for (String line : lines) {
-            String[] elements = line.split(", ");
-            if (elements[0].equals("last_name")) continue;
-            String[] dateValues = elements[2].split("/");
-            final int year = Integer.parseInt(dateValues[0]);
-            final int month = Integer.parseInt(dateValues[1]);
-            final int dayOfMonth = Integer.parseInt(dateValues[2]);
-            LocalDateTime date = LocalDateTime.of(year, month,
-                    dayOfMonth, 1, 1);
-            insert(date, new Employee(elements[0], elements[1], date, elements[3]));
-        }
-        return load();
-    }
 
     public Employee[] load() {
         ArrayList<Employee> results = new ArrayList<Employee>();
@@ -46,14 +25,6 @@ public class EmployeeRepository implements Repository<Employee[]> {
     public void delete(Employee... employees) {
         for (Employee employee : employees) {
             remove(employee);
-        }
-    }
-
-    private String readFromFile(){
-        try {
-            return new String(Files.readAllBytes(Paths.get(path)));
-        } catch (IOException e) {
-            return "";
         }
     }
 

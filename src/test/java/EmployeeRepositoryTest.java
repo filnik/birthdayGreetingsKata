@@ -1,5 +1,6 @@
 import com.filnik.repository.Employee;
 import com.filnik.repository.EmployeeRepository;
+import com.filnik.repository.EmployeeRepositoryFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -13,8 +14,8 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void employeeRepositoryHasEmailAddresses() throws Exception {
-        EmployeeRepository repository = new EmployeeRepository();
-        Employee[] employees = repository.loadFromDatabase();
+        EmployeeRepository repository = new EmployeeRepositoryFactory().createFromDatabase();
+        Employee[] employees = repository.load();
         assertTrue(employees.length == 2);
     }
 
@@ -30,9 +31,9 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void employeeRepositoryLoadsCorrectly() throws Exception {
-        EmployeeRepository repository = new EmployeeRepository();
         LocalDateTime date = LocalDateTime.of(1982, 10, 8, 11, 10);
-        Employee[] employees = repository.loadFromDatabase();
+        final EmployeeRepository employeeRepository = new EmployeeRepositoryFactory().createFromDatabase();
+        Employee[] employees = employeeRepository.load();
         assertTrue(employees[0].getEmail().equals("filnik90@gmail.com"));
         assertTrue(employees[0].getName().equals("John"));
         assertTrue(employees[0].getLastname().equals("Doe"));
@@ -41,11 +42,10 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void employeeRepositoryFiltersEmployeesCorrectly() throws Exception {
-        EmployeeRepository repository = new EmployeeRepository();
         LocalDateTime date = LocalDateTime.of(1982, 10, 8, 11, 10);
-        repository.loadFromDatabase();
-        assertTrue(repository.load().length == 2);
-        assertTrue(repository.load(date).length == 1);
+        final EmployeeRepository employeeRepository = new EmployeeRepositoryFactory().createFromDatabase();
+        assertTrue(employeeRepository.load().length == 2);
+        assertTrue(employeeRepository.load(date).length == 1);
     }
 
     @Test

@@ -1,8 +1,8 @@
 import com.filnik.repository.Employee;
 import com.filnik.repository.EmployeeRepository;
+import com.filnik.repository.EmployeeRepositoryFactory;
 import com.filnik.service.BirthdayService;
 import com.filnik.service.CommunicationService;
-import com.filnik.service.EmailService;
 import com.googlecode.gmail4j.javamail.JavaMailGmailMessage;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,11 +19,11 @@ public class BirthdayServiceTest {
 
     private BirthdayService birthdayService;
     private EmailServiceSpy communicationService;
-    private EmployeeRepositorySpy employeeRepository;
+    private EmployeeRepository employeeRepository;
 
     @Before
     public void setUp() throws Exception {
-        employeeRepository = new EmployeeRepositorySpy();
+        employeeRepository = new EmployeeRepositoryFactory().createEmptyRepository();
         communicationService = new EmailServiceSpy();
         birthdayService = new BirthdayService(employeeRepository, communicationService);
 
@@ -98,17 +98,6 @@ public class BirthdayServiceTest {
         birthdayService.sendGreetings(today);
 
         assertTrue(communicationService.messages.size() == 0);
-    }
-
-    private class EmployeeRepositorySpy extends EmployeeRepository{
-
-        public EmployeeRepositorySpy() {
-        }
-
-        @Override
-        public Employee[] loadFromDatabase() {
-            return new Employee[]{};
-        }
     }
 
     private class EmailServiceSpy implements CommunicationService {

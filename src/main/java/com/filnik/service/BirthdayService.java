@@ -2,9 +2,9 @@ package com.filnik.service;
 
 import com.filnik.repository.Employee;
 import com.filnik.repository.EmployeeRepository;
+import com.filnik.repository.EmployeeRepositoryFactory;
 
 import java.time.LocalDateTime;
-import java.time.Month;
 
 public class BirthdayService {
     private final EmployeeRepository employeeRepository;
@@ -12,8 +12,11 @@ public class BirthdayService {
 
     public BirthdayService(EmployeeRepository employeeRepository, CommunicationService communicationService) {
         this.employeeRepository = employeeRepository;
-        this.employeeRepository.loadFromDatabase();
         this.communicationService = communicationService;
+    }
+
+    public BirthdayService() {
+        this(new EmployeeRepositoryFactory().createFromDatabase(), new EmailService());
     }
 
     public void sendGreetings(LocalDateTime date) {
