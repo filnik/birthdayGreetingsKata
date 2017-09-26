@@ -16,8 +16,12 @@ public class EmailService implements CommunicationService{
     private final ImapGmailClient client;
 
     public EmailService() {
-        client = new ImapGmailClient();
+        this(new ImapGmailClient());
         client.setConnection(new ImapGmailConnection(EMAIL, PASSWORD.toCharArray()));
+    }
+
+    public EmailService(ImapGmailClient client) {
+        this.client = client;
     }
 
     @Override
@@ -28,7 +32,7 @@ public class EmailService implements CommunicationService{
 
     @Override
     public void send(Employee employee) {
-        final JavaMailGmailMessage message = new JavaMailGmailMessage();
+        final MailMessage message = new MailMessage();
         message.setSubject(MAIL_SUBJECT);
         message.setContentText(String.format(MAIL_CONTENT, employee.getName()));
         message.addTo(new EmailAddress(employee.getEmail()));
